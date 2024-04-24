@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMaisito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            background-color: #191970;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .movie-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .movie {
+            width: 300px;
+            margin: 20px;
+        }
+        .movie video {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .movie h3 {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CineMaisito</h1>
+    </header>
+    <div class="container">
+        <div class="movie-container">
+            <div class="movie">
+                <h3 onclick="reproducirPelicula('video1')">Película 1</h3>
+                <video id="video1" controls>
+                    <source src="pelicula1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="movie">
+                <h3 onclick="reproducirPelicula('video2')">Película 2</h3>
+                <video id="video2" controls>
+                    <source src="pelicula2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="movie">
+                <h3 onclick="reproducirPelicula('video3')">Oppenheimer</h3>
+                <video id="video3" controls>
+                    <source src="F:\Descargas\Oppenheimer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+           
+        </div>
+    </div>
+
+    <script>
+        function reproducirPelicula(id) {
+            var video = document.getElementById(id);
+            video.play();
+        }
+    </script>
+</body>
+</html>
